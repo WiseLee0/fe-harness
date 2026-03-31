@@ -1,0 +1,37 @@
+{
+  "name": "fe-harness",
+  "version": "1.0.5",
+  "description": "Figma design-to-code harness for Claude Code. Subagent-driven implementation, visual verification, and iterative fixing.",
+  "scripts": {
+    "build": "node scripts/bundle-puppeteer.js",
+    "test": "node --test fe-harness/bin/lib/__tests__/*.test.cjs",
+    "login": "npm login --registry https://registry.npmjs.org",
+    "publish": "npm publish --registry https://registry.npmjs.org"
+  },
+  "bin": {
+    "fe-harness": "bin/install.js"
+  },
+  "files": [
+    "bin",
+    "commands",
+    "agents",
+    "fe-harness",
+    "scripts"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "figma",
+    "design-to-code",
+    "visual-verification",
+    "subagent"
+  ],
+  "author": "qidian",
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer-core": "^24.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

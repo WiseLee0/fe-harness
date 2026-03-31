@@ -1,0 +1,31 @@
+{
+  // 单个任务最大重试次数
+  "maxRetries": 5,
+
+  // 开发服务器启动命令，例如 "npm run dev", "pnpm dev"
+  // 启动时自动分配随机端口（通过 PORT 环境变量传入）
+  "devServerCommand": "",
+
+  // 截图前等待时间（毫秒），留足页面渲染时间
+  "screenshotWaitMs": 10000,
+
+  // 视觉验证通过阈值（0-100），低于此分数会触发修复
+  "verifyThreshold": 80,
+
+  // 代码审查通过阈值（0-100）
+  "reviewThreshold": 80,
+
+  // 尺寸偏差容忍度（像素），超出则扣分（0-10）
+  "dimensionThreshold": 6,
+
+  // 分数下降容忍度，连续低于此差值触发回滚（0-10）
+  "scoreDropTolerance": 3,
+
+  // 硬性校验命令，例如 "npm run typecheck && npm run lint"
+  // 每轮修复后执行，不通过则阻断
+  "backpressureCommand": "",
+
+  // 设计任务验证时并行启动的最大浏览器实例数
+  // 过多的 Chrome 进程会消耗大量内存，建议 2-4
+  "maxParallelBrowsers": 3
+}
